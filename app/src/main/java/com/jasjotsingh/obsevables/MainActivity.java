@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
             public void onNext(@NonNull Task task) {
                 Log.d(TAG, "onNext: "+Thread.currentThread().getName());
                 Log.d(TAG, "onNext: "+task.getDescription());
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
 
             @Override
